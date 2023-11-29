@@ -413,7 +413,7 @@ if __name__ == '__main__':
             norm_layer=partial(nn.LayerNorm, eps=1e-6), r=r).cuda()
         throughput(torch.randn(32, 3, 16, 224, 224), model)
         print("model prune number", r)
-    flops = FlopCountAnalysis(model, torch.randn(1, 3, 16, 224, 224))
-    print(flops.total()/10**9)
+        flops = FlopCountAnalysis(model, torch.randn(1, 3, 16, 224, 224))
+        print(flops.total()/10**9)
     
 

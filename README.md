@@ -21,7 +21,7 @@ To optimize the speed-accuracy trade-off, we propose **S**emantic-aware **T**emp
 
 
 ### Pretrained Model
-For pretrained ViT, please refer to VideoMAE model zoo. [link](https://github.com/MCG-NJU/VideoMAE/blob/main/MODEL_ZOO.md)
+For pretrained ViT, please refer to VideoMAE model zoo. [[link]](https://github.com/MCG-NJU/VideoMAE/blob/main/MODEL_ZOO.md)
 
 ### Downstream Evaluation for Action Recognition
 To perform downstream evaluation for action recognition, run the following bash script:
@@ -42,6 +42,7 @@ python3 -u run_inference.py \
 ```
 Here, `r` represents the prune number of the first stage, and the `--model` argument corresponds to the model you choose to load as specified in the `model_vit.py` file.
 Make sure to replace `${DATA_PATH}`, `${CKPT_PATH}`, and `${OUTPUT_DIR}` with the actual paths you are using for your dataset, model checkpoint, and output log directory, respectively.
+
 To run the flops and throughput calculation code provided at the end of model_vit.py, you can simply execute the following command in your terminal:
 ```python
 python3 model_vit.py
