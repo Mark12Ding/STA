@@ -20,8 +20,8 @@ To optimize the speed-accuracy trade-off, we propose **S**emantic-aware **T**emp
 - Download the Something-something V2 dataset from the [opendatalab website](https://opendatalab.com/OpenDataLab/sthv2).
 
 
-### Pretrained Model
-For pretrained ViT, please refer to VideoMAE model zoo. [[link]](https://github.com/MCG-NJU/VideoMAE/blob/main/MODEL_ZOO.md)
+### Off-the-shelf Model
+For off-the-shelf ViT, please refer to VideoMAE model zoo. [[link]](https://github.com/MCG-NJU/VideoMAE/blob/main/MODEL_ZOO.md).
 
 ### Downstream Evaluation for Action Recognition
 To perform downstream evaluation for action recognition, run the following bash script:
