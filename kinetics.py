@@ -43,18 +43,18 @@ class VideoClsDataset(Dataset):
         if VideoReader is None:
             raise ImportError("Unable to import `decord` which is required to read videos.")
 
-        # import pandas as pd
-        # cleaned = pd.read_csv(self.anno_path, header=None, delimiter=' ')
-        # self.dataset_samples = list(cleaned.values[:, 0])
-        # self.label_array = list(cleaned.values[:, 1])
+        import pandas as pd
+        cleaned = pd.read_csv(self.anno_path, header=None, delimiter=' ')
+        self.dataset_samples = list(cleaned.values[:, 0])
+        self.label_array = list(cleaned.values[:, 1])
 
-        self.dataset_samples = []
-        self.label_array = []
-        with open(self.anno_path, 'r') as f:
-            for line in f:
-                data_path, label = line.rstrip().split(' ')
-                self.dataset_samples.append(os.path.join(os.path.dirname(self.anno_path), 'videos_val', data_path))
-                self.label_array.append(int(label))
+        # self.dataset_samples = []
+        # self.label_array = []
+        # with open(self.anno_path, 'r') as f:
+        #     for line in f:
+        #         data_path, label = line.rstrip().split(' ')
+        #         self.dataset_samples.append(os.path.join(os.path.dirname(self.anno_path), 'videos_val', data_path))
+        #         self.label_array.append(int(label))
 
 
         if (mode == 'train'):
