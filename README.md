@@ -1,4 +1,4 @@
-# Motion-aware Contrastive Video Representation Learning via Foreground-background Merging
+# Prune Spatio-temporal Tokens by Semantic-aware Temporal Accumulation
 Official pytorch implementation of our ICCV 2023 paper [Prune Spatio-temporal Tokens by Semantic-aware Temporal Accumulation.](https://arxiv.org/abs/2308.04549)
 
 ## Overview
