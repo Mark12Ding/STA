@@ -11,7 +11,7 @@ To optimize the speed-accuracy trade-off, we propose **S**emantic-aware **T**emp
 ## Usage
 
 ### Requirements
-- pytroch == 2.0.1
+- torch == 2.0.1
 - timm == 0.4.12
 - tensorboardX == 2.6.2.2 
 
