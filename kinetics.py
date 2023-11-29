@@ -5,7 +5,7 @@ import torch
 import decord
 from PIL import Image
 from torchvision import transforms
-from random_erasing import RandomErasing
+# from random_erasing import RandomErasing
 import warnings
 from decord import VideoReader, cpu
 from torch.utils.data import Dataset
@@ -212,18 +212,6 @@ class VideoClsDataset(Dataset):
             scale=scl,
             motion_shift=False
         )
-
-        if self.rand_erase:
-            erase_transform = RandomErasing(
-                args.reprob,
-                mode=args.remode,
-                max_count=args.recount,
-                num_splits=args.recount,
-                device="cpu",
-            )
-            buffer = buffer.permute(1, 0, 2, 3)
-            buffer = erase_transform(buffer)
-            buffer = buffer.permute(1, 0, 2, 3)
 
         return buffer
 

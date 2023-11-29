@@ -44,15 +44,6 @@ def get_args():
     parser.add_argument('--ckpt_path', default='', help='model checkpoint')
     parser.add_argument('--r', type=int, default=0, help='prune number')
     
-    # Augmentation parameters
-    parser.add_argument('--color_jitter', type=float, default=0.4, metavar='PCT',
-                        help='Color jitter factor (default: 0.4)')
-    parser.add_argument('--aa', type=str, default='rand-m7-n4-mstd0.5-inc1', metavar='NAME',
-                        help='Use AutoAugment policy. "v0" or "original". " + "(default: rand-m7-n4-mstd0.5-inc1)'),
-    parser.add_argument('--smoothing', type=float, default=0.1,
-                        help='Label smoothing (default: 0.1)')
-    parser.add_argument('--train_interpolation', type=str, default='bicubic',
-                        help='Training interpolation (random, bilinear, bicubic default: "bicubic")')
 
     # Evaluation parameters
     parser.add_argument('--crop_pct', type=float, default=None)
@@ -60,15 +51,6 @@ def get_args():
     parser.add_argument('--test_num_segment', type=int, default=5)
     parser.add_argument('--test_num_crop', type=int, default=3)
     
-    # Random Erase params
-    parser.add_argument('--reprob', type=float, default=0.25, metavar='PCT',
-                        help='Random erase prob (default: 0.25)')
-    parser.add_argument('--remode', type=str, default='pixel',
-                        help='Random erase mode (default: "pixel")')
-    parser.add_argument('--recount', type=int, default=1,
-                        help='Random erase count (default: 1)')
-    parser.add_argument('--resplit', action='store_true', default=False,
-                        help='Do not random erase first (clean) augmentation split')
 
     # Dataset parameters
     parser.add_argument('--data_path', default='/path/to/list_kinetics-400', type=str,

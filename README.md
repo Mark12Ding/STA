@@ -6,7 +6,7 @@ To optimize the speed-accuracy trade-off, we propose **S**emantic-aware **T**emp
 
 ![teaser](Figure/teaser.png)
 
-[[Project Page]](coming soon) [[arXiv]](https://arxiv.org/abs/2308.04549) [[PDF]](https://openaccess.thecvf.com/content/ICCV2023/papers/Ding_Prune_Spatio-temporal_Tokens_by_Semantic-aware_Temporal_Accumulation_ICCV_2023_paper.pdf)
+[Project Page](coming soon) [[arXiv]](https://arxiv.org/abs/2308.04549) [[PDF]](https://openaccess.thecvf.com/content/ICCV2023/papers/Ding_Prune_Spatio-temporal_Tokens_by_Semantic-aware_Temporal_Accumulation_ICCV_2023_paper.pdf)
 
 ## Usage
 
@@ -17,7 +17,7 @@ To optimize the speed-accuracy trade-off, we propose **S**emantic-aware **T**emp
 
 ### Data preparation
 - Download the Kinetics400 dataset from the [opendatalab website](https://opendatalab.com/OpenMMLab/Kinetics-400).
-- Download the Something-something V2 dataset from the [official website](https://opendatalab.com/OpenDataLab/sthv2).
+- Download the Something-something V2 dataset from the [opendatalab website](https://opendatalab.com/OpenDataLab/sthv2).
 
 
 ### Pretrained Model
@@ -26,11 +26,11 @@ For pretrained ViT, please refer to VideoMAE model zoo. [link](https://github.co
 ### Downstream Evaluation for Action Recognition
 To perform downstream evaluation for action recognition, run the following bash script:
 ```python
-    set -x
-    export MASTER_PORT=$((12000 + $RANDOM % 20000))
-    export OMP_NUM_THREADS=1 
+set -x
+export MASTER_PORT=$((12000 + $RANDOM % 20000))
+export OMP_NUM_THREADS=1 
 
-    python3 -u run_inference.py \
+python3 -u run_inference.py \
     --model vit_large_patch16_224 \
     --data_path ${DATA_PATH} \
     --ckpt_path ${CKPT_PATH} \
@@ -44,7 +44,7 @@ Here, `r` represents the prune number of the first stage, and the `--model` argu
 Make sure to replace `${DATA_PATH}`, `${CKPT_PATH}`, and `${OUTPUT_DIR}` with the actual paths you are using for your dataset, model checkpoint, and output log directory, respectively.
 To run the flops and throughput calculation code provided at the end of model_vit.py, you can simply execute the following command in your terminal:
 ```python
-    python3 model_vit.py
+python3 model_vit.py
 ```
 ## Visualization
 We visualize GradNorm distribution for ViT-Large on the Kinetics-400 validation set. The heatmap reveals sparse patterns across the board, indicating that most tokens do not contribute significantly to the final prediction. STA retains almost all areas of high-activation GradNorm.
@@ -54,7 +54,7 @@ We visualize the proposed STA strategy. We masked out the discarded tokens with 
 ![vis](Figure/vis.png)
 
 ## Acknowledgement
-Our code is based on the implementation of [VideoMAE](https://github.com/MCG-NJU/VideoMAE). We sincerely thanks those authors for their great works.
+Our code is based on the implementation of [VideoMAE](https://github.com/MCG-NJU/VideoMAE). We sincerely thanks the authors for their great work.
 
 
 ## Citation
