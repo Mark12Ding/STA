@@ -47,6 +47,7 @@ To run the flops and throughput calculation code provided at the end of model_vi
 ```python
 python3 model_vit.py
 ```
+Please ensure that a GPU is available to activate the CUDA environment.
 ## Visualization
 We visualize GradNorm distribution for ViT-Large on the Kinetics-400 validation set. The heatmap reveals sparse patterns across the board, indicating that most tokens do not contribute significantly to the final prediction. STA retains almost all areas of high-activation GradNorm.
 ![vis](Figure/grad_vis.png)
