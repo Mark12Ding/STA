@@ -6,7 +6,7 @@ To optimize the speed-accuracy trade-off, we propose **S**emantic-aware **T**emp
 
 ![teaser](Figure/teaser.png)
 
-[Project Page](coming soon) [[arXiv]](https://arxiv.org/abs/2308.04549) [[PDF]](https://openaccess.thecvf.com/content/ICCV2023/papers/Ding_Prune_Spatio-temporal_Tokens_by_Semantic-aware_Temporal_Accumulation_ICCV_2023_paper.pdf)
+[[Project Page]](https://mark12ding.github.io/project/ICCV23_STA/) [[arXiv]](https://arxiv.org/abs/2308.04549) [[PDF]](https://openaccess.thecvf.com/content/ICCV2023/papers/Ding_Prune_Spatio-temporal_Tokens_by_Semantic-aware_Temporal_Accumulation_ICCV_2023_paper.pdf)
 
 ## Usage
 
